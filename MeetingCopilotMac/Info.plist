@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- Yerel backend'e erişim (http/ws 127.0.0.1) -->
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+  </dict>
+
+  <!-- Backend URL'in (uygulama kodu buradan okuyacak) -->
+  <key>BackendIngestURL</key>
+  <string>https://your-backend.example/ingest-transcript</string>
+
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Mikrofon gerekli: canlı konuşmayı metne çevirmek için.</string>
+
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>Konuşma tanıma gerekli: konuşmanızı metne çevirmek için.</string>
+  
+  <key>BackendStartURL</key>
+  <string>http://127.0.0.1:8765/start</string>
+  <key>BackendWSURL</key>
+  <string>ws://127.0.0.1:8765/ws/transcript</string>
+  <key>BackendAskURL</key>
+  <string>http://127.0.0.1:8765/ask</string> <!-- (opsiyonel; yoksa buton disable olur) -->
+  
+
+  <!-- (İSTEĞE BAĞLI) Menubar-only app -->
+  <!--
+  <key>LSUIElement</key>
+  <true/>
+  -->
+
+</dict>
+</plist>
